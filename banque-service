@@ -199,7 +199,16 @@ query{
     }
   }
 }
-
+query{
+  compteBancaireById(id:"c8d8aec3-2929-4c09-be5c-2ccbd0bd743b"){
+    id
+    planComptableElementId
+    planComptableElement{
+      id
+      numeroCompte
+    }
+  }
+}
 mutation{
   ajouterCompteBancaire(compteBancaireDTO:{
     abrege:"lëllë"
@@ -208,8 +217,9 @@ mutation{
     structure:"ëlsa"
     num_compte:"988898"
     num_guichet:"2112212"
-    banqueId:"56d955b6-2f9c-43b6-aa0d-ccd66c019957"
-
+    banqueId:"051ccfdb-5510-415b-aaa6-7db68e65f08a"
+  	planComptableElementId:"4704e91e-2593-458b-a2a8-045515ffc34d"
+    societeId:"73ef9441-89ed-4ea1-a242-cec03b1a4e47"
   }){
     id
     abrege
